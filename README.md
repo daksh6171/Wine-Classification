@@ -1,12 +1,12 @@
 # Wine-Classification
 Here is the [Wine Dataset](https://archive.ics.uci.edu/ml/datasets/Wine) that was used in this project.
 
-## SYSTEM REQUIREMENTS
+### SYSTEM REQUIREMENTS
 1. Python3 needs to be installed on the PC.
 2. Important statistical libraries such as NumPy, pandas, scikit-learn, etc.
 3. The code can be run in Jupyter-notebook if installed otherwise, Google Colab can be used
 
-## DATA SET INFORMATION:
+### DATA SET INFORMATION:
 These data are the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars. The analysis determined the quantities of 13 constituents found in each of the three types of wines. The data is Multivariate.
 The attributes are:
 1) Alcohol 
@@ -26,7 +26,7 @@ The attributes are:
 ![image](https://github.com/daksh6171/Wine-Classification/blob/main/Images/Reading%20data.png)
 ![datset](https://github.com/daksh6171/Wine-Classification/blob/main/Images/Dataset.png)
 
-## ATTRIBUTE AND CLASS INFORMATION
+### ATTRIBUTE AND CLASS INFORMATION
 There are 13 attributes in total. All attributes are continuous data. Dataset was verified and contained no missing attribute values.
 
 ![no_missing_attribute](https://github.com/daksh6171/Wine-Classification/blob/main/Images/No%20missing%20attribute.png)
@@ -36,15 +36,15 @@ There are a total of 3 classes and a total of 178 instances.:
 * Class 2 - 71 instances
 * Class 3 - 48 instances
 
-## DATA PREPROCESSING
+### DATA PREPROCESSING
 We have calculated the measures of central tendencies and it can be summarized in the contingency table below:
 
 ![central_tendency](https://github.com/daksh6171/Wine-Classification/blob/main/Images/measure%20of%20the%20central%20tendency.png)
 
-## PRELIMINARY ANALYSIS OF DATA
+### PRELIMINARY ANALYSIS OF DATA
 We can observe that the data is sorted based on class labels. So we infer that we must randomize it before splitting. By observing the data description, we can infer that the features are not closely related to each other. For e.g. Proline values dominate overall central tendency measures over attributes such as Ash content. Hence, we can infer that there is a need for normalizing the attribute values to be contained in a similar domain. We decided to normalize the data after splitting it into test and training set.
 
-## TRAINING DATA vs TEST DATA
+### TRAINING DATA vs TEST DATA
 Here we are using a simple holdout method where we are keeping 25% of the data for test and 75% for training. The data has been randomized before split as observed in the preliminary stage.
 
 Train data:
@@ -63,7 +63,7 @@ Random values from test data:
 
 ![test_data_stats](https://github.com/daksh6171/Wine-Classification/blob/main/Images/test%20data%20stats.png)
 
-## NORMALIZATION OF TRAINING AND TEST DATA
+### NORMALIZATION OF TRAINING AND TEST DATA
 We performed two types of scaling:
 
 1. Standard Scaling
@@ -76,7 +76,7 @@ We performed two types of scaling:
 
 We have decided to use Min-Max Scaling over Standard Scaling. Since the values are much closer to each other in min-max and since we know that classifiers such as SVM depend on how good the scaling is performed, min-max dominates over standard scaling.
 
-## RE-ANALYSIS OF DATA AFTER PARTITIONING (TRAINING AND TEST SETS) AND NORMALIZING
+### RE-ANALYSIS OF DATA AFTER PARTITIONING (TRAINING AND TEST SETS) AND NORMALIZING
 1. Class Distribution
 * Class distribution in Original Dataset
 
@@ -102,15 +102,15 @@ These are the subplots of various important attributes and the relation between 
 
 Attributes and their influence on classification have been calculated in order to drop those attributes which are least important like Non Flavonoid phenols, Ash.
 
-## CLASSIFICATION AND CHOOSING APPROPRIATE CLASSIFIER
+### CLASSIFICATION AND CHOOSING APPROPRIATE CLASSIFIER
 We have used SVM (with the linear kernel), Naive Bias Classifiers and Random Forest (decision tree) classifiers.
 
 ![result](https://github.com/daksh6171/Wine-Classification/blob/main/Images/conclusion%20table.png)
 
-## CONCLUSION
+### CONCLUSION
 Although it may appear counter-intuitive, we conclude naive bias classifiers may be the best classifier in this case. This is because the classifiers are showing extremely high accuracy and we must try to avoid overfitting
 
-## References
+### References
 * [SVM](https://scikit-learn.org/stable/modules/svm.html)
 * [Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 * [Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
