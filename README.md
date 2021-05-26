@@ -22,7 +22,8 @@ The attributes are:
 11) Hue
 12) OD280/OD315 of diluted wines
 13) Proline
-![image](https://user-images.githubusercontent.com/44581586/119629030-44148a00-be2b-11eb-93d5-56afab44b693.png)
+
+
 
 
 ##ATTRIBUTE AND CLASS INFORMATION
